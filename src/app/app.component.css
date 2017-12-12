@@ -64,3 +64,26 @@
   transition: 1s;
   background: green!important;
 }
+
+form {
+  position: relative;
+  display: block;
+  text-align: left;
+  margin: auto;
+  width: 100%;
+  padding: 50px 10px;
+  background: silver;
+  border-radius: 2px;
+}
+
+label {
+  display: block;
+  padding: 5px 0;
+}
+
+input[type=text],
+input[type=date],
+input[type=number] {
+  padding: 10px 15px;
+  width: auto;
+}
