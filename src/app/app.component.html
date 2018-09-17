@@ -8,16 +8,40 @@
       <button (click)="click($event);">{{color}} цвет</button>
     </div>
     <div class="paste-data-users"></div>
-    <form novalidate #form="ngForm"> <!-- #локальное имя ng -->
+
+
+
+
+
+
+
+    <form #form="ngForm">
       <label><input ngModel type="text" name="last_name" placeholder="Имя"></label> <!-- ngModel обязательный атрибут для тегов в форме -->
+
+      <label><input ngModel type="text" name="locastorage" placeholder="{{save}}"></label>
+
       <label><input ngModel type="text" name="first_name" placeholder="Фамилия"></label>
       <label>Пол<br>
         М<input ngModel type="checkbox" name="floor-m"><br>
         Ж<input ngModel type="checkbox" name="floor-f">
       </label>
       <label><input ngModel type="date" name="date" placeholder="Дата рождения"></label>
-      <label><input type="submit" value="Отправить" (onClick)=submit($event)></label>
+      <label><input type="submit" value="Отправить" (click)=submit(form)></label>
     </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <h1>Введённые данные</h1>
     <p>{{ form.value | json}}</p> <!-- Обращение к форме происходит без # -->
   </div>

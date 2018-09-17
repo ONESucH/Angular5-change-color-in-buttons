@@ -11,10 +11,12 @@ import {Component} from '@angular/core';
 export class AppComponent {
   color = 'Получить';
   boolean = false;
+  public save = localStorage.getItem('localstorage');
 
-  submit(event:Event) {
-    event.preventDefault();
-    console.log('event', event);
+  submit(formJson) {
+    localStorage.setItem('localstorage', formJson.value.locastorage);
+    this.save = formJson.value.locastorage;
+    console.log('this.save', this.save);
   }
 
   click(event) {
